@@ -9,4 +9,12 @@ public class SharkTest {
     Shark shark = new Shark("Gregory");
     assertEquals("Gregory", shark.getName());
   }
+
+  @Test
+  public void canEat() {
+    Shark shark = new Shark("Gregory");
+    assertEquals("munch munch", shark.eat());
+  }
+
+
 }
