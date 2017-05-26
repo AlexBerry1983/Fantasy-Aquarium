@@ -10,5 +10,10 @@ public class SalmonTest {
     assertEquals("Alan", salmon.getName());
   }
 
+  @Test
+  public void canEat() {
+    Salmon salmon = new Salmon("Alan");
+    assertEquals("munch munch", salmon.eat());
+  }
 
 }

@@ -1,5 +1,5 @@
 package animals;
-public class Salmon {
+public class Salmon extends Animal{
 
   private String name;
 
