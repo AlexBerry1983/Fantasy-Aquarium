@@ -2,13 +2,11 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 import animals.*;
 
-public class SalmonTest {
+public class SharkTest {
 
   @Test
   public void canGetName() {
-    Salmon salmon = new Salmon("Alan");
-    assertEquals("Alan", salmon.getName());
+    Shark shark = new Shark("Gregory");
+    assertEquals("Gregory", shark.getName());
   }
-
-
 }
