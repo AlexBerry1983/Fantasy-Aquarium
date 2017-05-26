@@ -16,4 +16,12 @@ public class SalmonTest {
     assertEquals("munch munch", salmon.eat());
   }
 
+  @Test
+  public void canSleep() {
+    Salmon salmon = new Salmon("Alan");
+    assertEquals("Zzzzz", salmon.sleep());
+  }
+
+
+
 }
