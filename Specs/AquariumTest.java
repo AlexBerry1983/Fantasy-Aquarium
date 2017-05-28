@@ -4,11 +4,11 @@
 // import aquarium.*;
 //
 // public class AquariumTest {
-//
-//
-//   @Test
-//   public void aquariumStartsWithNoEnclosures() {
-//     Aquarium aquarium = new Aquarium();
-//     assertEquals(0, aquarium.count());
-//   }
+
+  // @Test
+  // public void canAddNewEnclosure() {
+  //   Aquarium aquarium = new Aquarium();
+  //   aquarium.createNewEnclosure("Salmon", tank);
+  // }
+
 // }
