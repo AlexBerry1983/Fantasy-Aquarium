@@ -18,4 +18,8 @@ public class Enclosure {
     animals.add(animal);
   }
 
+  public void removeAnimal(int index) {
+    animals.remove(index);
+  }
+
 }
