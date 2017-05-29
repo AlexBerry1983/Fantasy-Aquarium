@@ -21,9 +21,9 @@ public class Visitor {
   public int getAge() {
     return this.age;
   }
-  
-  // public int getCash() {
-  //   return this.cash;
-  // }
+
+  public int countCash() {
+    return this.cash;
+  }
 
 }

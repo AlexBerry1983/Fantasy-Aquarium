@@ -16,5 +16,9 @@ public class VisitorTest {
     assertEquals(34, visitor.getAge());
   }
 
-
+  @Test
+  public void countCashOnPerson() {
+    Visitor visitor = new Visitor("Alex", 34, 100);
+    assertEquals(100, visitor.countCash());
+  }
 }
