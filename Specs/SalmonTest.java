@@ -1,6 +1,7 @@
 import static org.junit.Assert.*;
 import org.junit.Test;
 import animals.*;
+import foods.*;
 
 public class SalmonTest {
 
@@ -10,10 +11,18 @@ public class SalmonTest {
     assertEquals("Alan", salmon.getName());
   }
 
+  // @Test
+  // public void canEat() {
+  //   Salmon salmon = new Salmon("Alan");
+  //   FishFood food = new FishFood();
+  //   salmon.eat(food);
+  //   assertEquals(1, salmon.foodCount());
+  // }
+
   @Test
-  public void canEat() {
+  public void checkBellyStartsEmpty() {
     Salmon salmon = new Salmon("Alan");
-    assertEquals("munch munch", salmon.eat());
+    assertEquals(0, salmon.countFood());
   }
 
   @Test

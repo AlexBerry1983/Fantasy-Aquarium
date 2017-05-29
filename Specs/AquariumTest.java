@@ -14,10 +14,10 @@ public class AquariumTest {
     assertEquals(1, aquarium.countEnclosures());
   }
 
-
   @Test
   public void checkEnclosuresStartsEmpty() {
     Aquarium aquarium = new Aquarium();
     assertEquals(0, aquarium.countEnclosures());
   }
+
 }
