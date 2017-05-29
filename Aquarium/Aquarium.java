@@ -5,10 +5,10 @@ import enclosures.*;
 
 public class Aquarium {
 
-  HashMap<String, ArrayList<Enclosure>> enclosures = new HashMap<String, ArrayList<Enclosure>>();
+  private HashMap<String, ArrayList<Enclosure>> enclosures;
 
   public Aquarium() {
-    // this.enclosures = new HashMap<String, ArrayList<Enclosure>>();
+    this.enclosures = new HashMap<String, ArrayList<Enclosure>>();
   }
 
   public void createNewEnclosure(String name, ArrayList<Enclosure> aquariumTank) {
