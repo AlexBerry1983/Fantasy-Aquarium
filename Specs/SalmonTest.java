@@ -26,10 +26,16 @@ public class SalmonTest {
   }
 
   @Test
-  public void canSleep() {
+  public void canEmptyBellyWhenSleep() {
     Salmon salmon = new Salmon("Alan");
-    assertEquals("Zzzzz", salmon.sleep());
+    FishFood food1 = new FishFood();
+    FishFood food2 = new FishFood();
+    salmon.eat(food1);
+    salmon.eat(food2);
+    salmon.sleep();
+    assertEquals(0, salmon.countFood());
   }
+
 
 
 

@@ -23,4 +23,8 @@ public class Salmon extends Animal{
   public void eat(FishFood food) {
     belly.add(food);
   }
+
+  public void sleep() {
+    belly.clear();
+  }
 }

@@ -16,10 +16,6 @@ public class SharkTest {
   //   assertEquals("munch munch", shark.eat());
   // }
 
-  @Test
-  public void canSleep() {
-    Shark shark = new Shark("Gregory");
-    assertEquals("Zzzzz", shark.sleep());
-  }
+  
 
 }
