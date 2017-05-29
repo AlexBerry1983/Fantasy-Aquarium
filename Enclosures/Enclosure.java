@@ -22,4 +22,16 @@ public class Enclosure {
     animals.remove(index);
   }
 
+  public boolean isEnclosureEmpty() {
+    if (countAnimals() == 0) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  // public boolean matchingAnimalTypes(Animal newAnimal, ArrayList animals) {
+  //   return newAnimal.animalType.equals(animals[0].animalType);
+  // }
+
 }

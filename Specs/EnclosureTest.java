@@ -31,4 +31,12 @@ public class EnclosureTest {
     enclosure.removeAnimal(0);
     assertEquals(2, enclosure.countAnimals());
   }
+
+  @Test
+  public void checkEnclosureIsEmpty() {
+    Enclosure enclosure = new Enclosure();
+    assertEquals(true, enclosure.isEnclosureEmpty());
+  }
+
+
 }

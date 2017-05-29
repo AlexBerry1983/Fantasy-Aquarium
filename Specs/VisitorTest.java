@@ -21,4 +21,6 @@ public class VisitorTest {
     Visitor visitor = new Visitor("Alex", 34, 100);
     assertEquals(100, visitor.countCash());
   }
+
+  
 }
