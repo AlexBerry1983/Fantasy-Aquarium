@@ -10,4 +10,11 @@ public class AquariumStaffTest {
     assertEquals("Joe", staff.getName());
   }
 
+  @Test
+  public void canSetName() {
+    AquariumStaff staff = new AquariumStaff("Joe");
+    staff.setName("Mike");
+    assertEquals("Mike", staff.getName());
+  }
+
 }

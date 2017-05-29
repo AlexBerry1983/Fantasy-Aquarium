@@ -11,4 +11,9 @@ public class AquariumStaff {
   public String getName() {
     return this.name;
   }
+
+  public void setName(String newName) {
+    this.name = newName;
+  }
+
 }
