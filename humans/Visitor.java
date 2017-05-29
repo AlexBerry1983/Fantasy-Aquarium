@@ -18,10 +18,10 @@ public class Visitor {
     return this.name;
   }
 
-  // public int getAge() {
-  //   return this.age;
-  // }
-  //
+  public int getAge() {
+    return this.age;
+  }
+  
   // public int getCash() {
   //   return this.cash;
   // }
