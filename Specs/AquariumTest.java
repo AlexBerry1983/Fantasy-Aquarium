@@ -6,12 +6,13 @@ import aquarium.*;
 
 public class AquariumTest {
 
-  // @Test
-  // public void canAddNewEnclosure() {
-  //   Aquarium aquarium = new Aquarium();
-  //   Enclosure salmontank = new Enclosure();
-  //   aquarium.createNewEnclosure("Salmon", salmontank);
-  // }
+  @Test
+  public void canAddNewEnclosure() {
+    Aquarium aquarium = new Aquarium();
+    Enclosure salmontank = new Enclosure();
+    aquarium.createNewEnclosure("Salmon", salmontank);
+    assertEquals(1, aquarium.countEnclosures());
+  }
 
 
   @Test
