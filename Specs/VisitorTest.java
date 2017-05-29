@@ -1,6 +1,7 @@
 import static org.junit.Assert.*;
 import org.junit.*;
 import humans.*;
+import aquarium.Aquarium;
 
 public class VisitorTest {
 
@@ -28,4 +29,6 @@ public class VisitorTest {
     visitor.updateCash(70);
     assertEquals(70, visitor.countCash());
   }
+
+
 }

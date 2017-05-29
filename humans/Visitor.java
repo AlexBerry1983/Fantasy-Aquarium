@@ -30,5 +30,9 @@ public class Visitor {
     return this.cash = newCash;
   }
 
+  public void buyTicket() {
+    this.cash -= 10;
+  }
+
 
 }

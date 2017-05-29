@@ -3,6 +3,7 @@ import static org.junit.Assert.*;
 import org.junit.*;
 import enclosures.*;
 import aquarium.*;
+import humans.Visitor;
 
 public class AquariumTest {
 
@@ -18,6 +19,21 @@ public class AquariumTest {
   public void checkEnclosuresStartsEmpty() {
     Aquarium aquarium = new Aquarium();
     assertEquals(0, aquarium.countEnclosures());
+  }
+
+  @Test
+  public void checkAquariumTakingsStartsNil() {
+    Aquarium aquarium = new Aquarium();
+    assertEquals(0, aquarium.countTakings());
+  }
+
+  @Test
+  public void checkChargeForTickets() {
+    Aquarium aquarium = new Aquarium();
+    Visitor visitor = new Visitor("Alex", 34, 100);
+    visitor.buyTicket();
+    aquarium.addToTakings(10);
+    assertEquals(10, aquarium.countTakings());
   }
 
 }
