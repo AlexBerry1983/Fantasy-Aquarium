@@ -6,10 +6,12 @@ public class AquariumStaff {
 
   private String name;
   private ArrayList<Meat> bagOfMeat;
+  private ArrayList<FishFood> bagOfFlakes;
 
   public AquariumStaff(String name) {
     this.name = name;
     this.bagOfMeat = new ArrayList<Meat>();
+    this.bagOfFlakes = new ArrayList<FishFood>();
   }
 
   public String getName() {
@@ -24,8 +26,15 @@ public class AquariumStaff {
     return bagOfMeat.size();
   }
 
+  public int countFishFoodInBag() {
+    return bagOfFlakes.size();
+  }
+
   public void getMeat(Meat meat) {
     bagOfMeat.add(meat);
   }
 
+  public void getFishFood(FishFood flakes) {
+    bagOfFlakes.add(flakes);
+  }
 }

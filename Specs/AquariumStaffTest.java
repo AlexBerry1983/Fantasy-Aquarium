@@ -26,4 +26,12 @@ public class AquariumStaffTest {
     assertEquals(1, staff.countMeat());
   }
 
+  @Test
+  public void canAddFishFoodToBag() {
+    AquariumStaff staff = new AquariumStaff("Joe");
+    FishFood flakes = new FishFood();
+    staff.getFishFood(flakes);
+    assertEquals(1, staff.countFishFoodInBag());
+  }
+
 }
