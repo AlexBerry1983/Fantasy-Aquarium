@@ -23,4 +23,8 @@ public class Shark extends Animal{
   public void eat(Meat meat) {
     belly.add(meat);
   }
+
+  public void sleep() {
+    belly.clear();
+  }
 }

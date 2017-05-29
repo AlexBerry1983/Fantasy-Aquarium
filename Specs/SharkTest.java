@@ -19,6 +19,15 @@ public class SharkTest {
     assertEquals(1, shark.countFood());
   }
 
+  @Test
+  public void emptyBellyAfterSleep() {
+    Shark shark = new Shark("Gregory");
+    Meat meat = new Meat();
+    shark.eat(meat);
+    shark.sleep();
+    assertEquals(0, shark.countFood());
+  }
+
 
 
 }
