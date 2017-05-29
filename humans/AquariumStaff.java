@@ -39,8 +39,8 @@ public class AquariumStaff {
     bagOfFlakes.add(flakes);
   }
 
-  // public void feedCarnivores(Meat meat, AbleToEatMeat animal) {
-  //   bagOfMeat.remove(0);
-  //
-  // }
+  public void feedCarnivore(Meat meat, Carnivorous animal) {
+    bagOfMeat.remove(0);
+    animal.eat(meat);
+  }
 }

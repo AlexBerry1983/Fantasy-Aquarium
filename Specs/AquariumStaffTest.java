@@ -34,8 +34,15 @@ public class AquariumStaffTest {
     staff.getFishFood(flakes);
     assertEquals(1, staff.countFishFoodInBag());
   }
-  // 
-  // @Test
-  // public void canFeedCarnivores
+
+  @Test
+  public void canFeedCarnivores() {
+    AquariumStaff staff = new AquariumStaff("Joe");
+    Shark shark = new Shark("Manuel");
+    Meat tBone = new Meat();
+    staff.getMeat(tBone);
+    staff.feedCarnivore(tBone, shark);
+    assertEquals(1, shark.countFood());
+  }
 
 }
