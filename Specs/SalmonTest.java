@@ -11,13 +11,13 @@ public class SalmonTest {
     assertEquals("Alan", salmon.getName());
   }
 
-  // @Test
-  // public void canEat() {
-  //   Salmon salmon = new Salmon("Alan");
-  //   FishFood food = new FishFood();
-  //   salmon.eat(food);
-  //   assertEquals(1, salmon.foodCount());
-  // }
+  @Test
+  public void canEat() {
+    Salmon salmon = new Salmon("Alan");
+    FishFood food = new FishFood();
+    salmon.eat(food);
+    assertEquals(1, salmon.countFood());
+  }
 
   @Test
   public void checkBellyStartsEmpty() {
