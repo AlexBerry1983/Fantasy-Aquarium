@@ -6,11 +6,17 @@ import aquarium.*;
 
 public class AquariumTest {
 
-  @Test
-  public void canAddNewEnclosure() {
-    Aquarium aquarium = new Aquarium();
-    ArrayList<Enclosure> salmontank = new ArrayList<Enclosure>();
-    aquarium.createNewEnclosure("Salmon", salmontank);
-  }
+  // @Test
+  // public void canAddNewEnclosure() {
+  //   Aquarium aquarium = new Aquarium();
+  //   Enclosure salmontank = new Enclosure();
+  //   aquarium.createNewEnclosure("Salmon", salmontank);
+  // }
 
+
+  @Test
+  public void checkEnclosuresStartsEmpty() {
+    Aquarium aquarium = new Aquarium();
+    assertEquals(0, aquarium.countEnclosures());
+  }
 }
