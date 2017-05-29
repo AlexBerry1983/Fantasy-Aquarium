@@ -1,6 +1,7 @@
 import static org.junit.Assert.*;
 import org.junit.*;
 import humans.*;
+import foods.*;
 
 public class AquariumStaffTest {
 
@@ -15,6 +16,14 @@ public class AquariumStaffTest {
     AquariumStaff staff = new AquariumStaff("Joe");
     staff.setName("Mike");
     assertEquals("Mike", staff.getName());
+  }
+
+  @Test
+  public void canAddMeatToBag() {
+    AquariumStaff staff = new AquariumStaff("Joe");
+    Meat meat = new Meat();
+    staff.getMeat(meat);
+    assertEquals(1, staff.countMeat());
   }
 
 }
