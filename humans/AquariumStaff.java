@@ -1,6 +1,7 @@
 package humans;
 import foods.*;
 import java.util.*;
+import animals.*;
 
 public class AquariumStaff {
 
@@ -37,4 +38,9 @@ public class AquariumStaff {
   public void getFishFood(FishFood flakes) {
     bagOfFlakes.add(flakes);
   }
+
+  // public void feedCarnivores(Meat meat, AbleToEatMeat animal) {
+  //   bagOfMeat.remove(0);
+  //
+  // }
 }
