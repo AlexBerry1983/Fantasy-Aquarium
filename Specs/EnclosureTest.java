@@ -57,4 +57,13 @@ public class EnclosureTest {
     salmonTank.addAnimal(salmon2);
     assertEquals(false, salmonTank.matchingAnimalTypes(salmon));
   }
+
+  @Test
+  public void cantAddOppositeTypesToSameEnclosure() {
+    Enclosure sharkTank = new Enclosure();
+    Shark shark = new Shark("Steve");
+    Salmon salmon = new Salmon("Alan");
+    sharkTank.addAnimal(shark);
+    assertEquals(false, sharkTank.addAnimal(salmon));
+  }
 }

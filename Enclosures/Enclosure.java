@@ -14,8 +14,12 @@ public class Enclosure {
     return animals.size();
   }
 
-  public void addAnimal(Animal animal) {
-    animals.add(animal);
+  public boolean addAnimal(Animal animal) {
+    if (matchingAnimalTypes(animal)) {
+      animals.add(animal);
+      return true;
+    }
+    else {return false;}
   }
 
   public void removeAnimal(int index) {
@@ -41,6 +45,6 @@ public class Enclosure {
     return result;
   }
 
-  
+
 
 }
