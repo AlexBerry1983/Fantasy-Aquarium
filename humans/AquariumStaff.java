@@ -43,4 +43,9 @@ public class AquariumStaff {
     bagOfMeat.remove(0);
     animal.eat(meat);
   }
+
+  public void feedHerbivore(FishFood food, Herbivorous animal) {
+    bagOfFlakes.remove(0);
+    animal.eat(food);
+  }
 }

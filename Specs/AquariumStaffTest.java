@@ -45,4 +45,13 @@ public class AquariumStaffTest {
     assertEquals(1, shark.countFood());
   }
 
+  @Test
+  public void canFeedHerbivores() {
+    AquariumStaff staff = new AquariumStaff("Joe");
+    Salmon salmon = new Salmon("Alan");
+    FishFood yumFlakes = new FishFood();
+    staff.getFishFood(yumFlakes);
+    staff.feedHerbivore(yumFlakes,salmon);
+    assertEquals(1, salmon.countFood());
+  }
 }
