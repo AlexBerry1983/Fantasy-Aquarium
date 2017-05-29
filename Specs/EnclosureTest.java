@@ -38,5 +38,23 @@ public class EnclosureTest {
     assertEquals(true, enclosure.isEnclosureEmpty());
   }
 
+  @Test
+  public void checkSameAnimalTypeIsPresent() {
+    Enclosure salmonTank = new Enclosure();
+    Salmon salmon = new Salmon("Alan");
+    Salmon salmon2 = new Salmon("Betty");
+    salmonTank.addAnimal(salmon);
+    assertEquals(true, salmonTank.matchingAnimalTypes(salmon2));
+  }
 
+  @Test
+  public void checkOppositeAnimalTypePresent() {
+    Enclosure salmonTank = new Enclosure();
+    Shark shark = new Shark("Steve");
+    Salmon salmon = new Salmon("Alan");
+    Salmon salmon2 = new Salmon("Betty");
+    salmonTank.addAnimal(shark);
+    salmonTank.addAnimal(salmon2);
+    assertEquals(false, salmonTank.matchingAnimalTypes(salmon));
+  }
 }

@@ -2,7 +2,7 @@ package animals;
 import foods.Meat;
 import java.util.*;
 
-public class Shark extends Animal implements Carnivorous{
+public class Shark implements Animal, Carnivorous{
 
   private String name;
   private ArrayList<Meat> belly;

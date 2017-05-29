@@ -30,8 +30,17 @@ public class Enclosure {
     }
   }
 
-  // public boolean matchingAnimalTypes(Animal newAnimal, ArrayList animals) {
-  //   return newAnimal.animalType.equals(animals[0].animalType);
-  // }
+  public boolean matchingAnimalTypes(Animal newAnimal){
+    boolean result = true;
+    for (Animal animal : animals){
+      if (!animal.getType().equals(newAnimal.getType())){
+        result = false;
+          return result;
+      }
+    }
+    return result;
+  }
+
+  
 
 }
