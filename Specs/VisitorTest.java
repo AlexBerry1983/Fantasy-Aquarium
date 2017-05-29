@@ -22,5 +22,10 @@ public class VisitorTest {
     assertEquals(100, visitor.countCash());
   }
 
-  
+  @Test
+  public void canUpdateCash() {
+    Visitor visitor = new Visitor("Alex", 34, 100);
+    visitor.updateCash(70);
+    assertEquals(70, visitor.countCash());
+  }
 }

@@ -26,5 +26,9 @@ public class Visitor {
     return this.cash;
   }
 
-  
+  public int updateCash(int newCash) {
+    return this.cash = newCash;
+  }
+
+
 }
