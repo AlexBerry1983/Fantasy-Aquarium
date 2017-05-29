@@ -6,14 +6,20 @@ public class Salmon extends Animal{
 
   private String name;
   private ArrayList<FishFood> belly;
+  private AnimalType type;
 
   public Salmon(String name) {
     this.name = name;
     this.belly = new ArrayList<FishFood>();
+    this.type = AnimalType.HERBIVORE;
   }
 
   public String getName() {
     return this.name;
+  }
+
+  public AnimalType getType() {
+    return this.type;
   }
 
   public int countFood() {

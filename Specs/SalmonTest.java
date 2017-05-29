@@ -36,6 +36,13 @@ public class SalmonTest {
     assertEquals(0, salmon.countFood());
   }
 
+  @Test
+  public void checkAnimalType() {
+    Salmon salmon = new Salmon("Alan");
+    assertEquals(AnimalType.HERBIVORE, salmon.getType());
+    // assertEquals("HERBIVORE", salmon.getType().name());
+  }
+
 
 
 
