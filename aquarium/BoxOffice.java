@@ -28,8 +28,8 @@ public class BoxOffice {
   }
 
   public void sellTicket(Aquarium aquarium, Visitor visitor) {
-    if (visitor.getAge() <= 15) {
-      visitor.buyTicket(this.childTicket);
+    if (visitor.getAge() <= 15 && visitor.buyTicket(this.childTicket) == true) {
+      // visitor.buyTicket(this.childTicket);
       aquarium.addToTakings(this.childTicket);
     }
     else if (visitor.getAge() >15 && visitor.getAge() <60) {
