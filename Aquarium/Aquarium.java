@@ -2,20 +2,30 @@ package aquarium;
 
 import java.util.*;
 import enclosures.*;
-import humans.Visitor;
+import humans.*;
 
 public class Aquarium {
 
   private HashMap<String, Enclosure> enclosures;
+  private ArrayList<Humans> peopleInAquarium;
   private int takings;
 
   public Aquarium() {
     this.enclosures = new HashMap<String, Enclosure>();
     this.takings = takings;
+    this.peopleInAquarium = new ArrayList<Humans>();
   }
 
   public void createNewEnclosure(String name, Enclosure aquariumTank) {
     this.enclosures.put(name, aquariumTank);
+  }
+
+  public void addPersonToAquarium(Humans visitor) {
+    this.peopleInAquarium.add(visitor);
+  }
+
+  public int countPeople() {
+    return peopleInAquarium.size();
   }
 
   public int countEnclosures() {

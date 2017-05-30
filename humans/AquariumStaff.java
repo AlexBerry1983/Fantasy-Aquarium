@@ -3,7 +3,7 @@ import foods.*;
 import java.util.*;
 import animals.*;
 
-public class AquariumStaff {
+public class AquariumStaff implements Humans {
 
   private String name;
   private ArrayList<Meat> bagOfMeat;

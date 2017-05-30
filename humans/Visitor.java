@@ -2,7 +2,7 @@ package humans;
 
 import java.util.*;
 
-public class Visitor {
+public class Visitor implements Humans {
 
   private String name;
   private int age;
