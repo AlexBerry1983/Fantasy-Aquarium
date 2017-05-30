@@ -32,7 +32,7 @@ public class Aquarium {
     return enclosures.size();
   }
 
-  public int countTakings() {
+  public int getTakings() {
     return this.takings;
   }
 

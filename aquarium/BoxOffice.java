@@ -13,7 +13,6 @@ public class BoxOffice {
     this.childTicket = 5;
     this.adultTicket = 10;
     this.seniorTicket = 5;
-    this.takings = takings;
   }
 
   public int getChildTicketPrice() {
@@ -28,19 +27,18 @@ public class BoxOffice {
     return this.seniorTicket;
   }
 
-  // public void addToTakings(int amount) {
-  //   this.takings += amount;
-  // }
-
   public void sellTicket(Aquarium aquarium, Visitor visitor) {
     if (visitor.getAge() <= 15) {
       visitor.buyTicket(this.childTicket);
+      aquarium.addToTakings(this.childTicket);
     }
     else if (visitor.getAge() >15 && visitor.getAge() <60) {
       visitor.buyTicket(this.adultTicket);
+      aquarium.addToTakings(this.adultTicket);
     }
     else if (visitor.getAge() >= 60) {
       visitor.buyTicket(this.seniorTicket);
+      aquarium.addToTakings(this.seniorTicket);
     }
     aquarium.addPersonToAquarium(visitor);
   }

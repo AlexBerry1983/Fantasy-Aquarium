@@ -24,7 +24,7 @@ public class AquariumTest {
   @Test
   public void checkAquariumTakingsStartsNil() {
     Aquarium aquarium = new Aquarium();
-    assertEquals(0, aquarium.countTakings());
+    assertEquals(0, aquarium.getTakings());
   }
 
   // @Test

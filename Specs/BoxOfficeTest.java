@@ -59,4 +59,30 @@ public class BoxOfficeTest {
     assertEquals(1, aquarium.countPeople());
   }
 
+  @Test
+  public void checkAddFundsToTakingsForChild() {
+    BoxOffice boxOffice = new BoxOffice();
+    Aquarium aquarium = new Aquarium();
+    Visitor visitor = new Visitor("Leyla", 10, 15);
+    boxOffice.sellTicket(aquarium, visitor);
+    assertEquals(5, aquarium.getTakings());
+  }
+
+  @Test
+  public void checkAddFundsToTakingsForAdult() {
+    BoxOffice boxOffice = new BoxOffice();
+    Aquarium aquarium = new Aquarium();
+    Visitor visitor = new Visitor("Margo", 46, 95);
+    boxOffice.sellTicket(aquarium, visitor);
+    assertEquals(10, aquarium.getTakings());
+  }
+
+  @Test
+  public void checkAddFundsToTakingsForSenior() {
+    BoxOffice boxOffice = new BoxOffice();
+    Aquarium aquarium = new Aquarium();
+    Visitor visitor = new Visitor("Albert", 90, 95);
+    boxOffice.sellTicket(aquarium, visitor);
+    assertEquals(5, aquarium.getTakings());
+  }
 }
