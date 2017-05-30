@@ -19,4 +19,7 @@ public class SecretLab {
     this.experimentationRoom.add(visitor);
   }
 
+  public void liquidateTestSubject() {
+    this.experimentationRoom.remove(0);
+  }
 }

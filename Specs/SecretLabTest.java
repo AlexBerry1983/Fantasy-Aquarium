@@ -20,5 +20,18 @@ public class SecretLabTest {
     assertEquals(1, lab.countTestSubjects());
   }
 
+  @Test
+  public void canRemoveVisitorToExperimentationHash() {
+    SecretLab lab = new SecretLab();
+    Visitor visitor = new Visitor("Wee Davey", 24, 1000);
+    Visitor visitor2 = new Visitor("Fat Eric", 35, 1000);
+    Visitor visitor3 = new Visitor("Blind Fred", 24, 1000);
+    lab.secureTestSubject(visitor);
+    lab.secureTestSubject(visitor2);
+    lab.secureTestSubject(visitor3);
+    lab.liquidateTestSubject();
+    assertEquals(2, lab.countTestSubjects());
+  }
+
 
 }
