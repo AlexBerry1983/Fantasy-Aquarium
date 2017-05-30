@@ -15,7 +15,7 @@ public class Enclosure {
   }
 
   public boolean addAnimal(Animal animal) {
-    if (matchingAnimalTypes(animal)) {
+    if (isEnclosureEmpty() | matchingAnimalTypes(animal)) {
       animals.add(animal);
       return true;
     }
