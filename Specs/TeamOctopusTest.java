@@ -25,7 +25,14 @@ public class TeamOctopusTest {
     assertEquals(1, octopus.countFood());
   }
 
-  
+  @Test
+  public void emptyBellyAfterSleep() {
+    TeamOctopus octopus = new TeamOctopus("Grabby");
+    Meat meat = new Meat();
+    octopus.eat(meat);
+    octopus.sleep();
+    assertEquals(0, octopus.countFood());
+  }
 
 
 
