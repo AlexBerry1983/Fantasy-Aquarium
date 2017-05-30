@@ -6,9 +6,9 @@ import humans.*;
 public class BoxOfficeTest {
 
   @Test
-  public void checkChildTicketPrice() {
+  public void checkDiscountedTicketPrice() {
     BoxOffice boxOffice = new BoxOffice();
-    assertEquals(5, boxOffice.getChildTicketPrice());
+    assertEquals(5, boxOffice.getDiscountedTicketPrice());
   }
 
   @Test
@@ -18,13 +18,7 @@ public class BoxOfficeTest {
   }
 
   @Test
-  public void checkSeniorTicketPrice() {
-    BoxOffice boxOffice = new BoxOffice();
-    assertEquals(5, boxOffice.getSeniorTicketPrice());
-  }
-
-  @Test
-  public void sellChildTicket() {
+  public void sellDiscountedTicket() {
     BoxOffice boxOffice = new BoxOffice();
     Aquarium aquarium = new Aquarium();
     Visitor visitor = new Visitor("Leyla", 10, 15);
@@ -85,4 +79,16 @@ public class BoxOfficeTest {
     boxOffice.sellTicket(aquarium, visitor);
     assertEquals(5, aquarium.getTakings());
   }
+
+  @Test
+  public void checkTakingsNotIncreasedIfVisitorCantBuyTicket(){
+    BoxOffice boxOffice = new BoxOffice();
+    Aquarium aquarium = new Aquarium();
+    Visitor visitor = new Visitor("Dodgy Bill", 20, 0);
+    boxOffice.sellTicket(aquarium, visitor);
+    assertEquals(0, aquarium.getTakings());
+  }
+
+  
+
 }

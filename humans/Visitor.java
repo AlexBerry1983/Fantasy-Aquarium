@@ -30,9 +30,6 @@ public class Visitor implements Humans {
     return this.cash = newCash;
   }
 
-  // public void buyTicket(int ticketPrice) {
-  //   this.cash -= ticketPrice;
-  // }
   public boolean buyTicket(int ticketPrice) {
     if (this.cash >= ticketPrice) {
       this.cash -= ticketPrice;
