@@ -28,6 +28,10 @@ public class BoxOffice {
     return this.seniorTicket;
   }
 
+  // public void addToTakings(int amount) {
+  //   this.takings += amount;
+  // }
+
   public void sellTicket(Aquarium aquarium, Visitor visitor) {
     if (visitor.getAge() <= 15) {
       visitor.buyTicket(this.childTicket);
@@ -38,7 +42,10 @@ public class BoxOffice {
     else if (visitor.getAge() >= 60) {
       visitor.buyTicket(this.seniorTicket);
     }
+    aquarium.addPersonToAquarium(visitor);
   }
+
+
 
 
 
