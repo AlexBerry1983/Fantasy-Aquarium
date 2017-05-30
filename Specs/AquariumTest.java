@@ -58,5 +58,14 @@ public class AquariumTest {
     assertEquals(1, aquarium.countPeople());
   }
 
-
+  @Test
+  public void canEvacuateAquarium() {
+    Aquarium aquarium = new Aquarium();
+    Visitor visitor = new Visitor("Wee Davey", 29, 50);
+    Visitor visitor2 = new Visitor("Alex", 34, 100);
+    aquarium.addPersonToAquarium(visitor);
+    aquarium.addPersonToAquarium(visitor2);
+    aquarium.evacuate();
+    assertEquals(0, aquarium.countPeople());
+  }
 }

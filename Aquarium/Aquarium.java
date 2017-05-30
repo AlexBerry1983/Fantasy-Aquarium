@@ -44,4 +44,7 @@ public class Aquarium {
     this.takings += payment;
   }
 
+  public void evacuate() {
+    peopleInAquarium.clear();
+  }
 }
