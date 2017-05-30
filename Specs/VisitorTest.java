@@ -30,13 +30,13 @@ public class VisitorTest {
     assertEquals(70, visitor.countCash());
   }
 
-  @Test
-  public void canBuyTicket() {
-    Visitor visitor = new Visitor("Louise", 28, 100);
-    visitor.buyTicket();
-    assertEquals(90, visitor.countCash());
-  }
+  // @Test
+  // public void canBuyTicket() {
+  //   Visitor visitor = new Visitor("Louise", 28, 100);
+  //   visitor.buyTicket();
+  //   assertEquals(90, visitor.countCash());
+  // }
 
-  
+
 
 }

@@ -23,4 +23,13 @@ public class BoxOfficeTest {
     assertEquals(5, boxOffice.getSeniorTicketPrice());
   }
 
+  @Test
+  public void sellChildTicket() {
+    BoxOffice boxOffice = new BoxOffice();
+    Aquarium aquarium = new Aquarium();
+    Visitor visitor = new Visitor("Leyla", 10, 15);
+    boxOffice.sellTicket(aquarium, visitor);
+    assertEquals(10, visitor.countCash());
+  }
+
 }

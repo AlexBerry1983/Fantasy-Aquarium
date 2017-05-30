@@ -30,8 +30,8 @@ public class Visitor implements Humans {
     return this.cash = newCash;
   }
 
-  public void buyTicket() {
-    this.cash -= 10;
+  public void buyTicket(int ticketPrice) {
+    this.cash -= ticketPrice;
   }
 
 
