@@ -5,14 +5,18 @@ import humans.*;
 
 public class SecretLab {
 
-  HashMap<String, Humans> ExperimentationRoom;
+  ArrayList<Humans> experimentationRoom;
 
   public SecretLab() {
-    this.ExperimentationRoom = new HashMap<String, Humans>();
+    this.experimentationRoom = new ArrayList<Humans>();
   }
 
   public int countTestSubjects() {
-    return this.ExperimentationRoom.size();
+    return this.experimentationRoom.size();
+  }
+
+  public void secureTestSubject(Humans visitor) {
+    this.experimentationRoom.add(visitor);
   }
 
 }

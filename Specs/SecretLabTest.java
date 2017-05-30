@@ -12,5 +12,13 @@ public class SecretLabTest {
     assertEquals(0, lab.countTestSubjects());
   }
 
+  @Test
+  public void canAddVisitorToExperimentationHash() {
+    SecretLab lab = new SecretLab();
+    Visitor visitor = new Visitor("Wee Davey", 24, 1000);
+    lab.secureTestSubject(visitor);
+    assertEquals(1, lab.countTestSubjects());
+  }
+
 
 }
