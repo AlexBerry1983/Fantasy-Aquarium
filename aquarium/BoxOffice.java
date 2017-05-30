@@ -19,4 +19,15 @@ public class BoxOffice {
   public int getChildTicketPrice() {
     return this.childTicket;
   }
+
+  public int getAdultTicketPrice() {
+    return this.adultTicket;
+  }
+
+  public int getSeniorTicketPrice() {
+    return this.seniorTicket;
+  }
+
+
+
 }
