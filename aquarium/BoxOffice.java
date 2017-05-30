@@ -37,7 +37,9 @@ public class BoxOffice {
       }
     }
     aquarium.addPersonToAquarium(visitor);
+    this.ticketTracker ++ ;
   }
+
 
 
 

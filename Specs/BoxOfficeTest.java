@@ -95,4 +95,14 @@ public class BoxOfficeTest {
     assertEquals(0, boxOffice.getTicketTracker());
   }
 
+  @Test
+  public void checkTicketSaleIncreasesTracker() {
+    BoxOffice boxOffice = new BoxOffice();
+    Aquarium aquarium = new Aquarium();
+    Visitor visitor = new Visitor("Albert", 90, 95);
+    boxOffice.sellTicket(aquarium, visitor);
+    boxOffice.sellTicket(aquarium, visitor);
+    assertEquals(2, boxOffice.getTicketTracker());
+  }
+
 }
