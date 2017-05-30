@@ -11,6 +11,12 @@ public class TeamOctopusTest {
     assertEquals("Grabby", octopus.getName());
   }
 
+  @Test
+  public void canGetType() {
+    TeamOctopus octopus = new TeamOctopus("Grabby");
+    assertEquals(AnimalType.CARNIVORE, octopus.getType());
+  }
+
   
 
 
