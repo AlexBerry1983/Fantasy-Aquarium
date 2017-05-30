@@ -89,6 +89,10 @@ public class BoxOfficeTest {
     assertEquals(0, aquarium.getTakings());
   }
 
-  
+  @Test
+  public void checkTicketTrackerStartsNil() {
+    BoxOffice boxOffice = new BoxOffice();
+    assertEquals(0, boxOffice.getTicketTracker());
+  }
 
 }

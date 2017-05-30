@@ -6,10 +6,12 @@ public class BoxOffice {
 
   private int discountedTicket;
   private int adultTicket;
+  private int ticketTracker;
 
   public BoxOffice() {
     this.discountedTicket = 5;
     this.adultTicket = 10;
+    this.ticketTracker = ticketTracker;
   }
 
   public int getDiscountedTicketPrice() {
@@ -18,6 +20,10 @@ public class BoxOffice {
 
   public int getAdultTicketPrice() {
     return this.adultTicket;
+  }
+
+  public int getTicketTracker() {
+    return this.ticketTracker;
   }
 
   public void sellTicket(Aquarium aquarium, Visitor visitor) {
