@@ -17,6 +17,14 @@ public class TeamOctopusTest {
     assertEquals(AnimalType.CARNIVORE, octopus.getType());
   }
 
+  @Test
+  public void canEat() {
+    TeamOctopus octopus = new TeamOctopus("Grabby");
+    Meat meat = new Meat();
+    octopus.eat(meat);
+    assertEquals(1, octopus.countFood());
+  }
+
   
 
 
