@@ -24,6 +24,10 @@ public class Aquarium {
     this.peopleInAquarium.add(visitor);
   }
 
+  public void removePersonFromAquarium() {
+    this.peopleInAquarium.remove(0);
+  }
+
   public int countPeople() {
     return peopleInAquarium.size();
   }

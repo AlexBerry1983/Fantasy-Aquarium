@@ -22,4 +22,9 @@ public class SecretLab {
   public void liquidateTestSubject() {
     this.experimentationRoom.remove(0);
   }
+
+  public boolean checkForPerson(Visitor visitor) {
+    return this.experimentationRoom.contains(visitor);
+  }
+
 }

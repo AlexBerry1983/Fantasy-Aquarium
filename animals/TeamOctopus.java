@@ -1,6 +1,8 @@
 package animals;
 import foods.Meat;
 import java.util.*;
+import aquarium.*;
+import humans.*;
 
 public class TeamOctopus implements Animal, Carnivorous{
 
@@ -32,5 +34,12 @@ public class TeamOctopus implements Animal, Carnivorous{
 
   public void sleep() {
     belly.clear();
+  }
+
+  public void abductHumanForLab(Aquarium aquarium, Visitor visitor, SecretLab lab) {
+    if (aquarium.countPeople() >= 3) {
+      aquarium.removePersonFromAquarium();
+      lab.secureTestSubject(visitor);
+    }
   }
 }
