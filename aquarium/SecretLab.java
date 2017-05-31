@@ -40,4 +40,10 @@ public class SecretLab {
     removeTestSubject();
     return "Conversion to delicious and nutritious meatSludge complete";
   }
+
+  public String makeDrone(Visitor visitor) {
+    removeTestSubject();
+    return "New Drone created, all hail our glorious leader, Alan";
+  }
+
 }

@@ -58,5 +58,21 @@ public class SecretLabTest {
     assertEquals("Conversion to delicious and nutritious meatSludge complete", lab.makeMeatSludge(visitor));
   }
 
+  @Test
+  public void canMakeDrones() {
+    Aquarium aquarium = new Aquarium();
+    SecretLab lab = new SecretLab();
+    Visitor visitor = new Visitor("Anne the Merciless", 50, 1000);
+    Visitor visitor2 = new Visitor("Fat Eric", 35, 1000);
+    Visitor visitor3 = new Visitor("Blind Fred", 24, 1000);
+    TeamOctopus octopus = new TeamOctopus("Grabby");
+
+    aquarium.addPersonToAquarium(visitor);
+    aquarium.addPersonToAquarium(visitor2);
+    aquarium.addPersonToAquarium(visitor3);
+    octopus.abductHumanForLab(aquarium, visitor, lab);
+    assertEquals("New Drone created, all hail our glorious leader, Alan", lab.makeDrone(visitor));
+  }
+
 
 }
