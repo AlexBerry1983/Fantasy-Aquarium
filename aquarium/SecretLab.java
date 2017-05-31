@@ -22,7 +22,7 @@ public class SecretLab {
   public String liquidateTestSubject() {
     while (countTestSubjects() >= 5) {
     this.experimentationRoom.remove(0);
-    System.out.println("Commencing liquidation in 5 ...");
+    System.out.println("Commencing liquidation in 5 .. 4 ..");
     }
     return "Excess humans eradicated, Have a nice day.";
   }
