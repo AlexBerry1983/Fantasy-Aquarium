@@ -42,21 +42,22 @@ public class SecretLabTest {
     assertEquals(4, lab.countTestSubjects());
   }
 
-  @Test
-  public void canMakeMeatSludge() {
-    Aquarium aquarium = new Aquarium();
-    SecretLab lab = new SecretLab();
-    Visitor visitor = new Visitor("Anne the Merciless", 50, 1000);
-    Visitor visitor2 = new Visitor("Fat Eric", 35, 1000);
-    Visitor visitor3 = new Visitor("Blind Fred", 24, 1000);
-    TeamOctopus octopus = new TeamOctopus("Grabby");
-
-    aquarium.addPersonToAquarium(visitor);
-    aquarium.addPersonToAquarium(visitor2);
-    aquarium.addPersonToAquarium(visitor3);
-    octopus.abductHumanForLab(aquarium, visitor, lab);
-    assertEquals("Conversion to delicious and nutritious meatSludge complete", lab.makeMeatSludge(visitor));
-  }
+  // @Test
+  // public void canMakeMeatSludge() {
+  //   Aquarium aquarium = new Aquarium();
+  //   SecretLab lab = new SecretLab();
+  //   Visitor visitor = new Visitor("Anne the Merciless", 50, 1000);
+  //   Visitor visitor2 = new Visitor("Fat Eric", 35, 1000);
+  //   Visitor visitor3 = new Visitor("Blind Fred", 24, 1000);
+  //   TeamOctopus octopus = new TeamOctopus("Grabby");
+  //   Meat meat = new Meat();
+  //
+  //   aquarium.addPersonToAquarium(visitor);
+  //   aquarium.addPersonToAquarium(visitor2);
+  //   aquarium.addPersonToAquarium(visitor3);
+  //   octopus.abductHumanForLab(aquarium, visitor, lab);
+  //   assertEquals(meat, lab.makeMeatSludge(visitor, meat));
+  // }
 
   @Test
   public void canMakeDrones() {
@@ -74,5 +75,22 @@ public class SecretLabTest {
     assertEquals("New Drone created, all hail our glorious leader, Alan", lab.makeDrone(visitor));
   }
 
+  @Test
+  public void canAddMeatSludgeToBucket() {
+    Aquarium aquarium = new Aquarium();
+    SecretLab lab = new SecretLab();
+    Visitor visitor = new Visitor("Anne the Merciless", 50, 1000);
+    Visitor visitor2 = new Visitor("Fat Eric", 35, 1000);
+    Visitor visitor3 = new Visitor("Blind Fred", 24, 1000);
+    TeamOctopus octopus = new TeamOctopus("Grabby");
+    Meat meat = new Meat();
+
+    aquarium.addPersonToAquarium(visitor);
+    aquarium.addPersonToAquarium(visitor2);
+    aquarium.addPersonToAquarium(visitor3);
+    octopus.abductHumanForLab(aquarium, visitor, lab);
+    lab.makeMeatSludge(visitor, meat);
+    assertEquals(1, lab.checkMeatBucketLevels());
+  }
 
 }

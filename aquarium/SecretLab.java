@@ -7,9 +7,15 @@ import foods.*;
 public class SecretLab {
 
   ArrayList<Humans> experimentationRoom;
+  ArrayList<Meat> meatBucket;
 
   public SecretLab() {
     this.experimentationRoom = new ArrayList<Humans>();
+    this.meatBucket = new ArrayList<Meat>();
+  }
+
+  public int checkMeatBucketLevels() {
+    return this.meatBucket.size();
   }
 
   public int countTestSubjects() {
@@ -36,9 +42,13 @@ public class SecretLab {
     return this.experimentationRoom.contains(visitor);
   }
 
-  public String makeMeatSludge(Visitor visitor) {
+  public void addMeatToBucket(Meat meat) {
+    this.meatBucket.add(meat);
+  }
+
+  public void makeMeatSludge(Visitor visitor, Meat meat) {
     removeTestSubject();
-    return "Conversion to delicious and nutritious meatSludge complete";
+    addMeatToBucket(meat);
   }
 
   public String makeDrone(Visitor visitor) {
