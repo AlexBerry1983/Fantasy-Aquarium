@@ -2,6 +2,7 @@ package aquarium;
 import java.util.*;
 import animals.Salmon.*;
 import humans.*;
+import foods.*;
 
 public class SecretLab {
 
@@ -19,6 +20,10 @@ public class SecretLab {
     this.experimentationRoom.add(visitor);
   }
 
+  public void removeTestSubject() {
+    this.experimentationRoom.remove(0);
+  }
+
   public String liquidateTestSubject() {
     while (countTestSubjects() >= 5) {
     this.experimentationRoom.remove(0);
@@ -31,4 +36,8 @@ public class SecretLab {
     return this.experimentationRoom.contains(visitor);
   }
 
+  public String makeMeatSludge(Visitor visitor) {
+    removeTestSubject();
+    return "Conversion to delicious and nutritious meatSludge complete";
+  }
 }
