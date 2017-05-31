@@ -3,6 +3,7 @@ import org.junit.*;
 import humans.*;
 import foods.*;
 import animals.*;
+import aquarium.*;
 
 public class AquariumStaffTest {
 
@@ -21,9 +22,21 @@ public class AquariumStaffTest {
 
   @Test
   public void canAddMeatToBag() {
-    AquariumStaff staff = new AquariumStaff("Joe");
+    Aquarium aquarium = new Aquarium();
+    SecretLab lab = new SecretLab();
+    AquariumStaff staff = new AquariumStaff("Jules");
+    Visitor visitor = new Visitor("Anne the Merciless", 50, 1000);
+    Visitor visitor2 = new Visitor("Fat Eric", 35, 1000);
+    Visitor visitor3 = new Visitor("Blind Fred", 24, 1000);
+    TeamOctopus octopus = new TeamOctopus("Grabby");
     Meat meat = new Meat();
-    staff.getMeat(meat);
+
+    aquarium.addPersonToAquarium(visitor);
+    aquarium.addPersonToAquarium(visitor2);
+    aquarium.addPersonToAquarium(visitor3);
+    octopus.abductHumanForLab(aquarium, visitor, lab);
+    lab.makeMeatSludge(visitor, meat);
+    staff.getMeat(meat, lab);
     assertEquals(1, staff.countMeat());
   }
 
@@ -37,11 +50,23 @@ public class AquariumStaffTest {
 
   @Test
   public void canFeedCarnivores() {
-    AquariumStaff staff = new AquariumStaff("Joe");
+    Aquarium aquarium = new Aquarium();
+    SecretLab lab = new SecretLab();
+    AquariumStaff staff = new AquariumStaff("Jules");
+    Visitor visitor = new Visitor("Anne the Merciless", 50, 1000);
+    Visitor visitor2 = new Visitor("Fat Eric", 35, 1000);
+    Visitor visitor3 = new Visitor("Blind Fred", 24, 1000);
+    TeamOctopus octopus = new TeamOctopus("Grabby");
+    Meat meat = new Meat();
     Shark shark = new Shark("Manuel");
-    Meat tBone = new Meat();
-    staff.getMeat(tBone);
-    staff.feedCarnivore(tBone, shark);
+
+    aquarium.addPersonToAquarium(visitor);
+    aquarium.addPersonToAquarium(visitor2);
+    aquarium.addPersonToAquarium(visitor3);
+    octopus.abductHumanForLab(aquarium, visitor, lab);
+    lab.makeMeatSludge(visitor, meat);
+    staff.getMeat(meat, lab);
+    staff.feedCarnivore(meat, shark);
     assertEquals(1, shark.countFood());
   }
 

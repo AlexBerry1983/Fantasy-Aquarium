@@ -18,6 +18,10 @@ public class SecretLab {
     return this.meatBucket.size();
   }
 
+  public void getMeatFromBucket() {
+    this.meatBucket.remove(0);
+  }
+
   public int countTestSubjects() {
     return this.experimentationRoom.size();
   }

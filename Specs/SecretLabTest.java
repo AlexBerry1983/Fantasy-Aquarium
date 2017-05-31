@@ -23,7 +23,7 @@ public class SecretLabTest {
   }
 
   @Test
-  public void canRemoveVisitorToExperimentationHash() {
+  public void canRemoveVisitorToExperimentationRoom() {
     SecretLab lab = new SecretLab();
     Visitor visitor = new Visitor("Wee Davey", 22, 1000);
     Visitor visitor2 = new Visitor("Fat Eric", 35, 1000);

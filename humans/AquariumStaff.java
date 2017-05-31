@@ -2,6 +2,7 @@ package humans;
 import foods.*;
 import java.util.*;
 import animals.*;
+import aquarium.*;
 
 public class AquariumStaff implements Humans {
 
@@ -31,7 +32,8 @@ public class AquariumStaff implements Humans {
     return bagOfFlakes.size();
   }
 
-  public void getMeat(Meat meat) {
+  public void getMeat(Meat meat, SecretLab lab) {
+    lab.getMeatFromBucket();
     bagOfMeat.add(meat);
   }
 
