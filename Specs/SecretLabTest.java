@@ -58,5 +58,5 @@ public class SecretLabTest {
     assertEquals("Conversion to delicious and nutritious meatSludge complete", lab.makeMeatSludge(visitor));
   }
 
-  
+
 }
