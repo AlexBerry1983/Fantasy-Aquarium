@@ -19,8 +19,12 @@ public class SecretLab {
     this.experimentationRoom.add(visitor);
   }
 
-  public void liquidateTestSubject() {
+  public String liquidateTestSubject() {
+    while (countTestSubjects() >= 5) {
     this.experimentationRoom.remove(0);
+    System.out.println("Commencing liquidation in 5 ...");
+    }
+    return "Excess humans eradicated, Have a nice day.";
   }
 
   public boolean checkForPerson(Visitor visitor) {
