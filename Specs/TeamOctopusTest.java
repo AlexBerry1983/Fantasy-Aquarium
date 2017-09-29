@@ -18,9 +18,9 @@ public class TeamOctopusTest {
     Aquarium aquarium = new Aquarium();
     TeamOctopus octopus = new TeamOctopus("Grabby");
     SecretLab lab = new SecretLab();
-    Visitor visitor = new Visitor("Wee Davey", 24, 1000);
-    Visitor visitor2 = new Visitor("Fat Eric", 35, 1000);
-    Visitor visitor3 = new Visitor("Blind Fred", 24, 1000);
+    Visitor visitor = new Visitor("Davey", 24, 1000);
+    Visitor visitor2 = new Visitor("Eric", 35, 1000);
+    Visitor visitor3 = new Visitor("Fred", 24, 1000);
 
     aquarium.addPersonToAquarium(visitor);
     aquarium.addPersonToAquarium(visitor2);

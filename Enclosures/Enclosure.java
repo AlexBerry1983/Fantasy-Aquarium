@@ -10,6 +10,10 @@ public class Enclosure {
     this.animals = new ArrayList<Animal>();
   }
 
+  public ArrayList getAnimals() {
+    return this.animals;
+  }
+
   public int countAnimals() {
     return animals.size();
   }

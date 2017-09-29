@@ -16,7 +16,7 @@ public class Aquarium {
     this.peopleInAquarium = new ArrayList<Humans>();
   }
 
-  public void createNewEnclosure(String name, Enclosure aquariumTank) {
+  public void addNewEnclosure(String name, Enclosure aquariumTank) {
     this.enclosures.put(name, aquariumTank);
   }
 

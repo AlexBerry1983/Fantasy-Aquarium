@@ -39,7 +39,7 @@ public class BoxOfficeTest {
   public void sellSeniorTicket() {
     BoxOffice boxOffice = new BoxOffice();
     Aquarium aquarium = new Aquarium();
-    Visitor visitor = new Visitor("Ol Jim", 70, 65);
+    Visitor visitor = new Visitor("Jim", 70, 65);
     boxOffice.sellTicket(aquarium, visitor);
     assertEquals(60, visitor.countCash());
   }
@@ -48,7 +48,7 @@ public class BoxOfficeTest {
   public void checkAddVisitorToAquariumAfterBuysTicket() {
     BoxOffice boxOffice = new BoxOffice();
     Aquarium aquarium = new Aquarium();
-    Visitor visitor = new Visitor("Ol Jim", 70, 65);
+    Visitor visitor = new Visitor("Jim", 70, 65);
     boxOffice.sellTicket(aquarium, visitor);
     assertEquals(1, aquarium.countPeople());
   }
@@ -84,7 +84,7 @@ public class BoxOfficeTest {
   public void checkTakingsNotIncreasedIfVisitorCantBuyTicket(){
     BoxOffice boxOffice = new BoxOffice();
     Aquarium aquarium = new Aquarium();
-    Visitor visitor = new Visitor("Dodgy Bill", 20, 0);
+    Visitor visitor = new Visitor("Bill", 20, 0);
     boxOffice.sellTicket(aquarium, visitor);
     assertEquals(0, aquarium.getTakings());
   }

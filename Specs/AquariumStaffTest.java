@@ -25,9 +25,9 @@ public class AquariumStaffTest {
     Aquarium aquarium = new Aquarium();
     SecretLab lab = new SecretLab();
     AquariumStaff staff = new AquariumStaff("Jules");
-    Visitor visitor = new Visitor("Anne the Merciless", 50, 1000);
-    Visitor visitor2 = new Visitor("Fat Eric", 35, 1000);
-    Visitor visitor3 = new Visitor("Blind Fred", 24, 1000);
+    Visitor visitor = new Visitor("Anne", 50, 1000);
+    Visitor visitor2 = new Visitor("Eric", 35, 1000);
+    Visitor visitor3 = new Visitor("Fred", 24, 1000);
     TeamOctopus octopus = new TeamOctopus("Grabby");
     Meat meat = new Meat();
 
@@ -53,9 +53,9 @@ public class AquariumStaffTest {
     Aquarium aquarium = new Aquarium();
     SecretLab lab = new SecretLab();
     AquariumStaff staff = new AquariumStaff("Jules");
-    Visitor visitor = new Visitor("Anne the Merciless", 50, 1000);
-    Visitor visitor2 = new Visitor("Fat Eric", 35, 1000);
-    Visitor visitor3 = new Visitor("Blind Fred", 24, 1000);
+    Visitor visitor = new Visitor("Anne", 50, 1000);
+    Visitor visitor2 = new Visitor("Eric", 35, 1000);
+    Visitor visitor3 = new Visitor("Fred", 24, 1000);
     TeamOctopus octopus = new TeamOctopus("Grabby");
     Meat meat = new Meat();
     Shark shark = new Shark("Manuel");
